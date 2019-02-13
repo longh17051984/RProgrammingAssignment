@@ -1,6 +1,6 @@
 ## FILE
 #   run_analysis.R
-# 	linhnguyen2612
+
 
 
 library(dplyr)
@@ -104,6 +104,6 @@ humanActivityMeans <- humanActivity %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
 
-# output to file "output.txt"
-write.table(humanActivityMeans, "output.txt", row.names = FALSE, 
+# output to file "tidy_data.txt"
+write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, 
             quote = FALSE)
